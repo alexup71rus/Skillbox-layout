@@ -14,6 +14,7 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
     <script src="js/main.js"></script>
@@ -21,10 +22,15 @@
 <body>
     <header>
         <nav class="fixed-container top-menu">
+            <div class="top-menu__button_burger-menu">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
             <ul class="top-menu__list_menu">
-                <a href="#"><li>Услуги</li></a>
-                <a href="#"><li>Портфолио</li></a>
-                <a href="#"><li>Стоимость</li></a>
+               <li><a href="#services">Услуги</a></li>
+               <li><a href="#portfolio">Портфолио</a></li>
+               <li><a href="#prices">Стоимость</a></li>
             </ul>
 
             <button class="top-menu__button_call">Заказать звонок</button>
@@ -35,9 +41,17 @@
             <h1 class="header-title__text title">Дмитрий Алексеев</h1><br>
             <span class="header-title__span_description-title">Frontend-разработчик и веб-верстальщик</span><br><br><br>
             <button class="header-title__button_solid">Узнать больше</button>
+            <div class="flat-elements-top">
+                <span>&lt;span&gt;</span>
+                <span>&lt;div&gt;</span>
+                <span>&lt;/&gt;</span>
+                <span>#</span>
+                <span>{&nbsp;&nbsp;}</span>
+                <span>#</span>
+            </div>
         </div>
     </header>
-    <section class="section">
+    <section class="section" id="services">
         <h3 class="section__text_title">Что я делаю</h3>
         <div class="section__block_dolist">
             <div class="section__block_dolist_dolist-left">
@@ -51,15 +65,30 @@
         </div>
         <button class="header-title__button_solid">Узнать больше</button>
     </section>
-    <section class="section">
+    <section class="section" id="portfolio">
         <h3 class="section__text_title">Примеры моих работ</h3>
-        <span id="scroll-left"></span><br>
+        <div class="section__slider">
+            <span id="scroll-left"></span>
+            <div class="section__slider_container">
+                <figure class="section__text_title__image"><img src="img/Layer1.png" class="" alt="" ><figcaption>Сайт магазин детской одежды</figcaption></figure>
+                <figure class="section__text_title__image"><img src="img/Layer2.png" class="" alt="" ><figcaption>Сайт психолога Веры Антоновой</figcaption></figure>
+                <figure class="section__text_title__image"><img src="img/Layer3.png" class="" alt="" ><figcaption>Сайт магазина &laquo;Рыболов&raquo;</figcaption></figure>
+            </div>
+            <span id="scroll-right"></span>
+        </div>
         <button class="header-title__button_solid">Заказать проект</button>
     </section>
-    <section class="section-gradient" style="text-align: left;">
+    <section class="section-gradient" style="text-align: left;" id="prices">
+        <div class="flat-elements-bottom">
+            <span>&lt;span&gt;</span>
+            <span>&lt;div&gt;</span>
+            <span>&lt;/&gt;</span>
+            <span>#</span>
+            <span>{&nbsp;&nbsp;}</span>
+        </div>
         <div class="fixed-container" style="max-width: 1000px;">
             <h2 class="section-gradient__text title">Адаптивная вёрстка под все устройства<br>и&nbsp;браузеры от 1000 рублей всего за&nbsp;4&nbsp;часа.*</h2>
-            <span class="section-gradient__span_description-title">* Срок и стоимость могут отличаться от заявленных и рассчитываются индивидуально,<br>в&nbsp;зависимости от сложности задач.</span>
+            <span class="section-gradient__span_description-title">Срок и стоимость могут отличаться от заявленных и рассчитываются индивидуально,<br>в&nbsp;зависимости от сложности задач.</span>
         </div>
     </section> 
     <footer>
@@ -78,15 +107,15 @@
                 <img src="img/соцсети.png" width="411" height="46" usemap="#map" class="social" alt="Навигация">
                 <map name="map">
                     <area shape="circle" alt="VK" 
-                    coords="19,18, 20" 
+                    coords="19,18,20" 
                     href="2.html">
                     <area shape="circle" alt="FB" 
-                    coords="73,18, 20" href="3.html">
+                    coords="73,18,20" href="3.html">
                     <area shape="circle" alt="TW" 
-                    coords="125,18, 20" 
+                    coords="125,18,20" 
                     href="4.html">
                     <area shape="circle" alt="TW" 
-                    coords="180,18, 20" 
+                    coords="180,18,20" 
                     href="4.html">
                 </map>
             </div>
