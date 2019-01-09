@@ -17,12 +17,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="js/slick/slick.css">
+    <link rel="stylesheet" href="js/slick/slick-theme.css">
+    <script src="js/slick/slick.js"></script>
     <script src="js/main.js"></script>
 </head>
 <body>
     <header>
         <nav class="fixed-container top-menu">
-            <div class="top-menu__button_burger-menu">
+            <div class="top-menu__button_burger-menu" id="burger-menu">
                 <div></div>
                 <div></div>
                 <div></div>
@@ -33,14 +36,14 @@
                <li><a href="#prices">Стоимость</a></li>
             </ul>
 
-            <button class="top-menu__button_call">Заказать звонок</button>
+            <button class="top-menu__button_call button_call">Заказать звонок</button>
             <a href="tel:+79997813689" class="top-menu__link_tel">+7 (999) 781-36-89</a>
-            <i class="fas fa-phone top-menu__button_call_m"></i>
+            <i class="fas fa-phone top-menu__button_call_m button_call"></i>
         </nav>
         <div class="fixed-container header-title">
             <h1 class="header-title__text title">Дмитрий Алексеев</h1><br>
             <span class="header-title__span_description-title">Frontend-разработчик и веб-верстальщик</span><br><br><br>
-            <button class="header-title__button_solid">Узнать больше</button>
+            <button class="header-title__button_solid button_buy">Узнать больше</button>
             <div class="flat-elements-top">
                 <span>&lt;span&gt;</span>
                 <span>&lt;div&gt;</span>
@@ -50,6 +53,7 @@
                 <span>#</span>
             </div>
         </div>
+        <div id="windows"></div>
     </header>
     <section class="section" id="services">
         <h3 class="section__text_title">Что я делаю</h3>
@@ -63,20 +67,16 @@
                 <figure class="section__block_dolist_dolist-right_image"><img src="img/coding.png" class="" alt="" ><figcaption>Исправление и доработка существующей вёрстки</figcaption></figure>
             </div>
         </div>
-        <button class="header-title__button_solid">Узнать больше</button>
+        <button class="header-title__button_solid button_buy">Узнать больше</button>
     </section>
     <section class="section" id="portfolio">
         <h3 class="section__text_title">Примеры моих работ</h3>
         <div class="section__slider">
-            <span id="scroll-left"></span>
-            <div class="section__slider_container">
-                <figure class="section__text_title__image"><img src="img/Layer1.png" class="" alt="" ><figcaption>Сайт магазин детской одежды</figcaption></figure>
-                <figure class="section__text_title__image"><img src="img/Layer2.png" class="" alt="" ><figcaption>Сайт психолога Веры Антоновой</figcaption></figure>
-                <figure class="section__text_title__image"><img src="img/Layer3.png" class="" alt="" ><figcaption>Сайт магазина &laquo;Рыболов&raquo;</figcaption></figure>
-            </div>
-            <span id="scroll-right"></span>
+            <figure class="section__text_title__image"><img src="img/Layer1.png" class="" alt="" ><figcaption>Сайт магазин детской одежды</figcaption></figure>
+            <figure class="section__text_title__image"><img src="img/Layer2.png" class="" alt="" ><figcaption>Сайт психолога Веры Антоновой</figcaption></figure>
+            <figure class="section__text_title__image"><img src="img/Layer3.png" class="" alt="" ><figcaption>Сайт магазина &laquo;Рыболов&raquo;</figcaption></figure>
         </div>
-        <button class="header-title__button_solid">Заказать проект</button>
+        <button class="header-title__button_solid button_buy">Заказать проект</button>
     </section>
     <section class="section-gradient" style="text-align: left;" id="prices">
         <div class="flat-elements-bottom">
@@ -94,16 +94,16 @@
     <footer>
         <div class="block-info">
             <div>
-                <a href="#">Услуги</a><br>
-                <a href="#">Портфолио</a><br>
-                <a href="#">Стоимость</a><br>
+                <a href="#services">Услуги</a><br>
+                <a href="#portfolio">Портфолио</a><br>
+                <a href="#prices">Стоимость</a><br>
             </div>
             <div>
                 <i class="fas fa-phone"></i>&nbsp;&nbsp;&nbsp;<a href="tel:+79997813689" class="info__link_tel">+7 (999) 781-36-89</a><br>
                 <i class="fas fa-envelope"></i>&nbsp;&nbsp;&nbsp;<a href="mailto:admin@khodyr.ru" class="info__link_email">admin@khodyr.ru</a>
             </div>
             <div>
-                <button class="block-info__button_transparent">Заказать звонок</button>
+                <button class="block-info__button_transparent button_call">Заказать звонок</button>
                 <img src="img/соцсети.png" width="411" height="46" usemap="#map" class="social" alt="Навигация">
                 <map name="map">
                     <area shape="circle" alt="VK" 
