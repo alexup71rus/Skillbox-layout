@@ -51,8 +51,8 @@ $(document).ready(function(){
 
 
     var window_recall = //html
-`<i id="window_bg" onclick="$('#windows').fadeOut('fast', function(){$(this).html('')}); document.body.style.overflow = 'auto';"></i>
-<div id="window"><i class="fas fa-times close" onclick="$('#windows').fadeOut('fast', function(){$(this).html('')}); document.body.style.overflow = 'auto';"></i>
+`<i id="window_bg" onclick="$('#windows').fadeOut('fast', function(){$(this).html('')}); document.body.style.overflow = 'overlay';"></i>
+<div id="window"><i class="fas fa-times close" onclick="$('#windows').fadeOut('fast', function(){$(this).html('')}); document.body.style.overflow = 'overlay';"></i>
     <div class="window-content">
     <p>Имя:</p>
     <input type="text" class='input' name="name" id="name" placeholder="Имя">
@@ -63,8 +63,8 @@ $(document).ready(function(){
 </div>
 `;
     var window_buy = //html
-`<i id="window_bg" onclick="$('#windows').fadeOut('fast', function(){$(this).html('')}); document.body.style.overflow = 'auto';"></i>
-<div id="window"><i class="fas fa-times close" onclick="$('#windows').fadeOut('fast', function(){$(this).html('')}); document.body.style.overflow = 'auto';"></i>
+`<i id="window_bg" onclick="$('#windows').fadeOut('fast', function(){$(this).html('')}); document.body.style.overflow = 'overlay';"></i>
+<div id="window"><i class="fas fa-times close" onclick="$('#windows').fadeOut('fast', function(){$(this).html('')}); document.body.style.overflow = 'overlay';"></i>
     <div class="window-content">
         <p>Имя:</p>
         <input type="text" class='input' name="name" id="name" placeholder="Имя">
