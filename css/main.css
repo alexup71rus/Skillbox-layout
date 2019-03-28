@@ -563,8 +563,8 @@ area {
 
     .top-menu__button_call_m {
         position: absolute;
-        right: 20px;
-        top: 25px;
+        right: 25px;
+        top: 23px;
     }
 
     .section__block_dolist_dolist-left, .section__block_dolist_dolist-right {
