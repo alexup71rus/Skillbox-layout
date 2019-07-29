@@ -1,33 +1,34 @@
-var imageElms, menuMobileShow = false, scrollEnabled = true;
-// $(window).resize(function(){
-//     if(document.documentElement.clientWidth >= 1024){
-//         $(".top-menu__list_menu").removeClass("showM");
-//     }
-// });
+'use strict';
+var imageElms, menuMobileShow = false;
+var templateMailRecall = "Имя: {{name}}<br />Телефон: {{phone}}";
+var templateMailChat = "Имя: {{name}}<br />Телефон: {{phone}}<br />Почта: {{mail}}";
+var template;
 
 $(document).ready(function(){
+    var popupChat = $("#popup-chat");
+    var popupRecall = $("#popup-recall");
+    var popupBG = $("#popup_bg");
+
+    // включение мобильного меню
     var menuList = $(".top-menu__list_menu");
     $(document).click(function(){
-        if(menuList.css("height") >= "10px" && menuMobileShow == true) {
-            menuList.removeClass("showM");
+        if(menuList.css("height") >= "1px" && menuMobileShow == true) {
+            menuList.removeClass("show-mobile-menu");
         }
     });
 
     $("#burger-menu").click(function(){
-        menuList.addClass("showM");
+        menuList.addClass("show-mobile-menu");
         menuMobileShow = true;
     });
 
+    // плавный скролл
     $('a').click( function(){
-	    var scroll_el = $(this).attr('href');
-        if ($(scroll_el).length != 0) {
-	        $('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 500); 
+        var scroll_el = this.hash;
+        if (scroll_el.length > 0) {
+            $('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 500); 
         }
-	    // return false;
     });
-
-    // imageElms = $(".section__slider_container");
-    // $gallery = $('.section__slider');
 
     $(".section__slider").slick({
         dots: true,
@@ -38,54 +39,76 @@ $(document).ready(function(){
         variableWidth: true
     });
 
-    $("#scroll-left").click(function(){
-    });
 
-    $("#scroll-right").click(function(){
-    });
-
-
-
-    // 
-
-
-
-    var window_recall = //html
-`<i id="window_bg" onclick="$('#windows').fadeOut('fast', function(){$(this).html('')}); document.body.style.overflow = 'overlay';"></i>
-<div id="window"><i class="fas fa-times close" onclick="$('#windows').fadeOut('fast', function(){$(this).html('')}); document.body.style.overflow = 'overlay';"></i>
-    <div class="window-content">
-    <p>Имя:</p>
-    <input type="text" class='input' name="name" id="name" placeholder="Имя">
-    <p>Телефон:</p>
-    <input type="phone" class='input' name="phone" id="phone" placeholder="+7 (999) 999-99-99">
-    <input type="button" value="Отправить" name="send" id="send">
-    </div>
-</div>
-`;
-    var window_buy = //html
-`<i id="window_bg" onclick="$('#windows').fadeOut('fast', function(){$(this).html('')}); document.body.style.overflow = 'overlay';"></i>
-<div id="window"><i class="fas fa-times close" onclick="$('#windows').fadeOut('fast', function(){$(this).html('')}); document.body.style.overflow = 'overlay';"></i>
-    <div class="window-content">
-        <p>Имя:</p>
-        <input type="text" class='input' name="name" id="name" placeholder="Имя">
-        <p>Телефон:</p>
-        <input type="phone" class='input' name="phone" id="phone" placeholder="+7 (999) 999-99-99">
-        <p>Почта:</p>
-        <input type="email" class='input' name="email" id="email" placeholder="mail@gmail.com">
-        <input type="button" value="Отправить" name="send" id="send">
-    </div>
-</div>
-`;
+    //вызов модальных окон
     $(".button_call").click(function(){
-        $("#windows").hide().html(window_recall).fadeIn();
-        $("#window").fadeIn("slow");
-        // $("#window").animate({}, 500);
+        popupRecall.fadeIn();
+        popupBG.fadeIn();
         document.body.style.overflow = 'hidden';
     });
 
     $(".button_buy").click(function(){
-        $("#windows").hide().html(window_buy).fadeIn();
-        $("#window").fadeIn("slow");
+        popupChat.fadeIn();
+        popupBG.fadeIn();
         document.body.style.overflow = 'hidden';
+    });
+
+    // валидация форм и отправка писем
+    popupRecall[0].childNodes[3].childNodes[9].addEventListener('click', function (e) {
+        if (!popupRecall[0].childNodes[3].childNodes[3].value) {
+            popupRecall[0].childNodes[3].childNodes[3].style.outline = '2px solid red';
+            e.preventDefault();
+        } else {
+            popupRecall[0].childNodes[3].childNodes[3].style.outline = 'none';
+        }
+
+        if (!popupRecall[0].childNodes[3].childNodes[7].value) {
+            popupRecall[0].childNodes[3].childNodes[7].style.outline = '2px solid red';
+            e.preventDefault();
+        } else {
+            popupRecall[0].childNodes[3].childNodes[7].style.outline = 'none';
+        }
+
+        if (popupRecall[0].childNodes[3].childNodes[3].value && popupRecall[0].childNodes[3].childNodes[7].value) {
+            template = templateMailRecall.replace('{{name}}', popupRecall[0].childNodes[3].childNodes[3].value),
+                template = template.replace('{{phone}}', popupRecall[0].childNodes[3].childNodes[7].value);
+            
+            popupRecall[0].childNodes[3].childNodes[9].href += template;
+        } else {
+            e.preventDefault();
+        }
+    });
+
+    popupChat[0].childNodes[3].childNodes[13].addEventListener('click', function (e) {
+        if (!popupChat[0].childNodes[3].childNodes[3].value) {
+            popupChat[0].childNodes[3].childNodes[3].style.outline = '2px solid red';
+            e.preventDefault();
+        } else {
+            popupChat[0].childNodes[3].childNodes[3].style.outline = 'none';
+        }
+
+        if (!popupChat[0].childNodes[3].childNodes[7].value) {
+            popupChat[0].childNodes[3].childNodes[7].style.outline = '2px solid red';
+            e.preventDefault();
+        } else {
+            popupChat[0].childNodes[3].childNodes[7].style.outline = 'none';
+        }
+
+        if (!popupChat[0].childNodes[3].childNodes[11].value) {
+            popupChat[0].childNodes[3].childNodes[11].style.outline = '2px solid red';
+            e.preventDefault();
+        } else {
+            popupChat[0].childNodes[3].childNodes[11].style.outline = 'none';
+        }
+
+        if (popupChat[0].childNodes[3].childNodes[3].value && popupChat[0].childNodes[3].childNodes[7].value && popupChat[0].childNodes[3].childNodes[11].value) {
+            template = templateMailChat.replace('{{name}}', popupChat[0].childNodes[3].childNodes[3].value),
+                template = template.replace('{{phone}}', popupChat[0].childNodes[3].childNodes[7].value),
+                template = template.replace('{{mail}}', popupChat[0].childNodes[3].childNodes[11].value);
+
+            popupChat[0].childNodes[3].childNodes[13].href += template;
+        } else {
+            e.preventDefault();
+        }
     });
 });

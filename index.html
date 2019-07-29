@@ -43,7 +43,8 @@
         <div class="fixed-container header-title">
             <h1 class="header-title__text title">Александр Ходырев</h1><br>
             <span class="header-title__span_description-title">Frontend-разработчик и веб-верстальщик</span><br><br><br>
-            <button class="header-title__button_solid button_buy">Узнать больше</button>
+            <a href="#services" class="header-title__button_solid">Узнать больше</a>
+            <!-- <button class="header-title__button_solid button_buy">Узнать больше</button> -->
             <div class="flat-elements-top">
                 <span>&lt;span&gt;</span>
                 <span>&lt;div&gt;</span>
@@ -53,7 +54,33 @@
                 <span>#</span>
             </div>
         </div>
-        <div id="windows"></div>
+        <div id="windows">
+            <i id="popup_bg" onclick="$(this).fadeOut('fast'); $('#popup-recall').fadeOut('fast'); $('#popup-chat').fadeOut('fast'); document.body.style.overflow = 'overlay';" style="display: none"></i>
+            <div class="popup" id="popup-recall" style="display: none">
+                <i class="fas fa-times close"
+                    onclick="$('#popup-recall').fadeOut('fast'); $('#popup_bg').fadeOut('fast'); document.body.style.overflow = 'overlay';"></i>
+                <div class="popup-content">
+                    <p>Имя:</p>
+                    <input type="text" class='input' name="name" placeholder="Имя">
+                    <p>Телефон:</p>
+                    <input type="phone" class='input' name="phone" placeholder="+7 (999) 999-99-99">
+                    <a href="mailto:admin@khodyr.ru?subject=Заказ звонка&amp;body=" class="send">Отправить</a>
+                </div>
+            </div>
+            <div class="popup" id="popup-chat" style="display: none">
+                <i class="fas fa-times close"
+                    onclick="$('#popup-chat').fadeOut('fast'); $('#popup_bg').fadeOut('fast'); document.body.style.overflow = 'overlay';"></i>
+                <div class="popup-content">
+                    <p>Имя:</p>
+                    <input type="text" class='input' name="name" placeholder="Имя">
+                    <p>Телефон:</p>
+                    <input type="phone" class='input' name="phone" placeholder="+7 (999) 999-99-99">
+                    <p>Почта:</p>
+                    <input type="email" class='input' name="email" placeholder="mail@gmail.com">
+                    <a href="mailto:admin@khodyr.ru?subject=Узнать больше&amp;body=" class="send">Отправить</a>
+                </div>
+            </div>
+        </div>
     </header>
     <section class="section" id="services">
         <h3 class="section__text_title">Что я делаю</h3>
