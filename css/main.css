@@ -427,6 +427,11 @@ p {
 
 .flat-elements-top span {
     transition: 1s;
+    cursor: default;
+}
+
+.flat-elements-top span:hover {
+    opacity: .3;
 }
 
 @media (max-width: 800px) {
@@ -720,7 +725,7 @@ p {
         color: #e745a4;
         left: calc(40% - 200px);
         transition: 1s;
-        pointer-events: none;
+        /* pointer-events: none; */
     }
 
     .flat-elements-top span:nth-child(1) { position: absolute; transform: translate(36px, -568px) rotate(-10deg); font-size: 30px; }
@@ -1057,7 +1062,7 @@ p {
         color: #e745a4;
         z-index: -1;
         transition: 1s;
-        pointer-events: none;
+        /* pointer-events: none; */
     }
 
     .flat-elements-top span:nth-child(1) { position: absolute; transform: translate(36px, 68px) rotate(10deg); font-size: 30px; }
@@ -1779,7 +1784,7 @@ p {
         color: #e745a4;
         z-index: -1;
         transition: 1s;
-        pointer-events: none;
+        /* pointer-events: none; */
     }
 
     .flat-elements-top span:nth-child(1) { position: absolute; transform: translate(536px, 205px) rotate(30deg); font-size: 30px; }
