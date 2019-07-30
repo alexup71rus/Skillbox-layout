@@ -274,7 +274,7 @@ header {background-color: #fbfbfb;}
     font-size: 14px;
     color: #eeeeee;
     background-image: linear-gradient(to bottom, rgb(48, 48, 48), rgb(58, 48, 82));
-    padding: 10px 0;
+    padding: 20px 0;
 }
 
 .social {
@@ -1097,7 +1097,7 @@ p {
     .flat-elements-bottom span:nth-child(1) { position: absolute; transform: translate(1039px, 232px) rotate(30deg); font-size: 30px; }
     .flat-elements-bottom span:nth-child(2) { position: absolute; transform: translate(436px, 326px) rotate(-10deg); font-size: 20px; }
     .flat-elements-bottom span:nth-child(3) { position: absolute; transform: translate(396px, 35px) rotate(10deg); font-size: 30px; }
-    .flat-elements-bottom span:nth-child(4) { position: absolute; transform: translate(27px, 245px) rotate(-20deg); font-size: 40px; }
+    .flat-elements-bottom span:nth-child(4) { position: absolute; transform: translate(14px, 302px) rotate(-20deg); font-size: 40px; }
     .flat-elements-bottom span:nth-child(5) { position: absolute; transform: translate(-95px, 76px) rotate(-20deg); font-size: 40px; }
     .flat-elements-bottom span:nth-child(6) { position: absolute; transform: translate(-236px, 205px) rotate(-20deg); font-size: 40px; }
 
@@ -1440,7 +1440,7 @@ p {
         pointer-events: none;
     }
 
-    .flat-elements-bottom span:nth-child(1) { position: absolute; transform: translate(1039px, 232px) rotate(30deg); font-size: 30px; }
+    .flat-elements-bottom span:nth-child(1) { position: absolute; right: 30px; transform: translate(-7px, 132px) rotate(30deg); font-size: 20px; }
     .flat-elements-bottom span:nth-child(2) { position: absolute; transform: translate(436px, 326px) rotate(-10deg); font-size: 20px; }
     .flat-elements-bottom span:nth-child(3) { position: absolute; transform: translate(396px, 35px) rotate(10deg); font-size: 30px; }
     .flat-elements-bottom span:nth-child(4) { position: absolute; transform: translate(27px, 245px) rotate(-20deg); font-size: 40px; }
@@ -1800,7 +1800,7 @@ p {
         pointer-events: none;
     }
 
-    .flat-elements-bottom span:nth-child(1) { position: absolute; transform: translate(1039px, 232px) rotate(30deg); font-size: 30px; }
+    .flat-elements-bottom span:nth-child(1) { position: absolute; right: 80px; transform: translate(-7px, 132px) rotate(30deg); font-size: 20px; }
     .flat-elements-bottom span:nth-child(2) { position: absolute; transform: translate(436px, 326px) rotate(-10deg); font-size: 20px; }
     .flat-elements-bottom span:nth-child(3) { position: absolute; transform: translate(396px, 35px) rotate(10deg); font-size: 30px; }
     .flat-elements-bottom span:nth-child(4) { position: absolute; transform: translate(27px, 245px) rotate(-20deg); font-size: 40px; }
