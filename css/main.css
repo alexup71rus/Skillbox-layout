@@ -290,7 +290,6 @@ area {
     color: #f12fa0;
 }
 
-
 .top-menu__list_menu a {
     color: #333;
     text-decoration: none;
@@ -426,6 +425,11 @@ p {
 }
 
 @media (max-width: 800px) {
+    .top-menu {
+        position: absolute;
+        width: calc(100% - 35px);
+    }
+    
     header {
         background-image: url("../img/bg+Человек+фигура(2).jpg");
     }
