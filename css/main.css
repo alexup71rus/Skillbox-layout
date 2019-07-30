@@ -406,7 +406,8 @@ p {
 }
 
 .show-mobile-menu {
-    padding: 20px 10px !important;
+    position: absolute;
+    padding: 0px;
     height: 80vh !important;
     opacity: 1 !important;
 }
@@ -425,11 +426,6 @@ p {
 }
 
 @media (max-width: 800px) {
-    .top-menu {
-        position: absolute;
-        width: calc(100% - 35px);
-    }
-    
     header {
         background-image: url("../img/bg+Человек+фигура(2).jpg");
     }
@@ -626,7 +622,7 @@ p {
         height: 0;
         overflow: hidden;
         width: 100%;
-        padding: 0px 10px;
+        padding: 0px;
         margin: 0;
         opacity: 0;
         transition: .5s;
@@ -736,6 +732,10 @@ p {
 
     .slick-list {
         margin-bottom: 80px !important;
+    }
+
+    .show-mobile-menu {
+        padding: 20px 0px;
     }
 }
 
@@ -965,7 +965,7 @@ p {
         height: 0;
         overflow: hidden;
         width: 100%;
-        padding: 0px 10px;
+        padding: 0px;
         margin: 0;
         opacity: 0;
         transition: .5s;
