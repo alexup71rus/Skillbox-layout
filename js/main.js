@@ -11,8 +11,7 @@ $(document).ready(function(){
 
     // включение мобильного меню
     var menuList = $(".top-menu__list_menu");
-    $(menuList).click(function(e){
-        console.log(e, menuList.css("height"));
+    $(menuList).click(function(){
         if(menuList.css("height") != "0px" && menuMobileShow == true) {
             menuList.removeClass("show-mobile-menu");
         }
