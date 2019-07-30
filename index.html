@@ -55,10 +55,10 @@
             </div>
         </div>
         <div id="windows">
-            <i id="popup_bg" onclick="$(this).fadeOut('fast'); $('#popup-recall').fadeOut('fast'); $('#popup-chat').fadeOut('fast'); document.body.style.overflow = 'overlay';" style="display: none"></i>
+            <i id="popup_bg" onclick="document.body.style.overflow = 'auto'; $(this).fadeOut('fast'); $('#popup-recall').fadeOut('fast'); $('#popup-chat').fadeOut('fast');" style="display: none"></i>
             <div class="popup" id="popup-recall" style="display: none">
                 <i class="fas fa-times close"
-                    onclick="$('#popup-recall').fadeOut('fast'); $('#popup_bg').fadeOut('fast'); document.body.style.overflow = 'overlay';"></i>
+                    onclick="document.body.style.overflow = 'auto'; $('#popup-recall').fadeOut('fast'); $('#popup_bg').fadeOut('fast');"></i>
                 <div class="popup-content">
                     <p>Имя:</p>
                     <input type="text" class='input' name="name" placeholder="Имя">

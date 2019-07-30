@@ -759,6 +759,10 @@ p {
         transform: translateY(-50%);
     }
 
+    header .flat-elements-top {
+        top: 150px;
+    }
+
     .header-title__text {
         font-family: "Roboto", sans-serif;
         font-weight: 900;
@@ -1172,10 +1176,14 @@ p {
         padding: 0px 3%;
     }
 
-    header div {
+    header .header-title {
         position: relative;
         top: 40%;
         transform: translateY(-50%);
+    }
+    
+    header .flat-elements-top {
+        top: 90px;
     }
 
     .header-title__text {
@@ -1495,10 +1503,14 @@ p {
         padding: 0px 9%;
     }
 
-    header div {
+    header .header-title {
         position: relative;
         top: 40%;
         transform: translateY(-50%);
+    }
+
+    header .flat-elements-top {
+        top: 90px;
     }
 
     .header-title__text {
