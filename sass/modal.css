@@ -1,0 +1,71 @@
+#windows {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  -webkit-transform: initial;
+          transform: initial;
+}
+
+#popup_bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 99;
+  -webkit-transform: initial;
+          transform: initial;
+}
+
+.popup {
+  display: inline-block;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  max-height: 400px;
+  background: #ffffff;
+  z-index: 100;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 3px;
+  -webkit-box-shadow: 0 3px 10px -3px #333;
+          box-shadow: 0 3px 10px -3px #333;
+}
+
+.popup-content {
+  padding: 25px 10px 10px 10px;
+  -webkit-transform: initial;
+          transform: initial;
+}
+
+.send {
+  display: inline-block;
+  color: #fff;
+  background: #ff543a;
+  padding: 10px 15px;
+  margin: 10px 0 0px 0;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  text-decoration: none;
+}
+
+.close {
+  position: absolute;
+  right: 0;
+  padding: 10px 13px 10px 10px;
+  font-size: 25px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.close:hover {
+  text-shadow: 0 2px 5px #bdbdbd;
+  color: #ff543a;
+}
+/*# sourceMappingURL=modal.css.map */
