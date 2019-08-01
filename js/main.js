@@ -9,6 +9,8 @@ $(document).ready(function(){
     var popupRecall = $("#popup-recall");
     var popupBG = $("#popup_bg");
 
+    $(".phone-number").mask("+7 (999) 999-99-99");
+
     // включение мобильного меню
     var menuList = $(".top-menu__list_menu");
     $(menuList).click(function(){

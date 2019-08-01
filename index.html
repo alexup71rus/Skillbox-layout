@@ -14,13 +14,14 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./js/vendor/jquery/jquery.min.js"></script>
+    <script src="./js/vendor/jquery/jquery.maskedinput.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="js/slick/slick.css">
-    <link rel="stylesheet" href="js/slick/slick-theme.css">
-    <script src="js/slick/slick.js"></script>
-    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./js/vendor/slick/slick.css">
+    <link rel="stylesheet" href="./js/vendor/slick/slick-theme.css">
+    <script src="./js/vendor/slick/slick.js"></script>
+    <script src="./js/main.js"></script>
 </head>
 <body>
     <header>
@@ -61,9 +62,9 @@
                     onclick="document.body.style.overflow = 'auto'; $('#popup-recall').fadeOut('fast'); $('#popup_bg').fadeOut('fast');"></i>
                 <div class="popup-content">
                     <p>Имя:</p>
-                    <input type="text" class='input' name="name" placeholder="Имя">
+                    <input type="text" class='input name' name="name" placeholder="Имя">
                     <p>Телефон:</p>
-                    <input type="phone" class='input' name="phone" placeholder="+7 (999) 999-99-99">
+                    <input type="phone" class='input phone-number' name="phone" placeholder="+7 (999) 999-99-99">
                     <a href="mailto:admin@khodyr.ru?subject=Заказ звонка&amp;body=" class="send">Отправить</a>
                 </div>
             </div>
@@ -72,11 +73,11 @@
                     onclick="$('#popup-chat').fadeOut('fast'); $('#popup_bg').fadeOut('fast'); document.body.style.overflow = 'overlay';"></i>
                 <div class="popup-content">
                     <p>Имя:</p>
-                    <input type="text" class='input' name="name" placeholder="Имя">
+                    <input type="text" class='input name' name="name" placeholder="Имя">
                     <p>Телефон:</p>
-                    <input type="phone" class='input' name="phone" placeholder="+7 (999) 999-99-99">
+                    <input type="phone" class='input phone-number' name="phone" placeholder="+7 (999) 999-99-99">
                     <p>Почта:</p>
-                    <input type="email" class='input' name="email" placeholder="mail@gmail.com">
+                    <input type="email" class='input email' name="email" placeholder="example@gmail.com">
                     <a href="mailto:admin@khodyr.ru?subject=Узнать больше&amp;body=" class="send">Отправить</a>
                 </div>
             </div>
