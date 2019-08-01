@@ -1825,3 +1825,11 @@ p {
         display: none !important;
     }
 }
+
+.flat-elements-top {
+    user-select: none;
+}
+
+.flat-elements-bottom {
+    user-select: none;
+}
