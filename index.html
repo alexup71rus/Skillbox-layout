@@ -58,7 +58,8 @@
         <div id="windows">
             <i id="popup_bg" onclick="document.body.style.overflow = 'auto'; $(this).fadeOut('fast'); $('#popup-recall').fadeOut('fast'); $('#popup-chat').fadeOut('fast');" style="display: none"></i>
             <div class="popup" id="popup-recall" style="display: none">
-                <i class="fas fa-times close"
+                <i class="fas fa-times close" tabindex="0"
+                    onkeyup="if (event.code == 'Enter' || event.code == 'Space') { document.body.style.overflow = 'auto'; $('#popup-recall').fadeOut('fast'); $('#popup_bg').fadeOut('fast'); }"
                     onclick="document.body.style.overflow = 'auto'; $('#popup-recall').fadeOut('fast'); $('#popup_bg').fadeOut('fast');"></i>
                 <div class="popup-content">
                     <p>Имя:</p>
@@ -69,7 +70,8 @@
                 </div>
             </div>
             <div class="popup" id="popup-chat" style="display: none">
-                <i class="fas fa-times close"
+                <i class="fas fa-times close" tabindex="0"
+                    onkeyup="if (event.code == 'Enter' || event.code == 'Space') { $('#popup-chat').fadeOut('fast'); $('#popup_bg').fadeOut('fast'); document.body.style.overflow = 'overlay'; }"
                     onclick="$('#popup-chat').fadeOut('fast'); $('#popup_bg').fadeOut('fast'); document.body.style.overflow = 'overlay';"></i>
                 <div class="popup-content">
                     <p>Имя:</p>

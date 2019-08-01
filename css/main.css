@@ -246,6 +246,14 @@ body {
     min-width: 320px;
 }
 
+.send:focus,
+.send:active,
+.close:focus,
+.close:active {
+    outline: none;
+    box-shadow: 0 0 2px 1px #f12f9f;
+}
+
 li {
     list-style-type: none; /* Убираем маркеры */
 }

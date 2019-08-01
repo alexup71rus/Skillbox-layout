@@ -206,6 +206,20 @@
   color: #ff543a;
 }
 
+.flat-elements-top {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.flat-elements-bottom {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
 .social {
   width: 193px;
   height: 30px;
