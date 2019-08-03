@@ -41,18 +41,20 @@
             <a href="tel:+79997813689" class="top-menu__link_tel">+7 (999) 781-36-89</a>
             <i class="fas fa-phone top-menu__button_call_m button_call"></i>
         </nav>
-        <div class="fixed-container header-title">
-            <h1 class="header-title__text title">Александр Ходырев</h1><br>
-            <span class="header-title__span_description-title">Frontend-разработчик и веб-верстальщик</span><br><br><br>
-            <a href="#services" class="header-title__button_solid">Узнать больше</a>
-            <!-- <button class="header-title__button_solid button_buy">Узнать больше</button> -->
-            <div class="flat-elements-top" aria-hidden="true">
-                <span>&lt;span&gt;</span>
-                <span>&lt;div&gt;</span>
-                <span>&lt;/&gt;</span>
-                <span>#</span>
-                <span>{&nbsp;&nbsp;}</span>
-                <span>#</span>
+        <div class="header-title">
+            <div class="header-title_content fixed-container">
+                <h1 class="header-title__text title">Александр Ходырев</h1>
+                <span class="header-title__span_description-title">Frontend-разработчик и веб-верстальщик</span>
+                <a href="#services" class="header-title__button_solid">Узнать больше</a>
+                <!-- <button class="header-title__button_solid button_buy">Узнать больше</button> -->
+                <div class="flat-elements-top" aria-hidden="true">
+                    <span>&lt;span&gt;</span>
+                    <span>&lt;div&gt;</span>
+                    <span>&lt;/&gt;</span>
+                    <span>#</span>
+                    <span>{&nbsp;&nbsp;}</span>
+                    <span>#</span>
+                </div>
             </div>
         </div>
         <div id="windows">
@@ -84,49 +86,84 @@
                 </div>
             </div>
         </div>
+        <!-- <svg class="svg" width="850" height="650" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <defs>
+                <linearGradient id="grad3" x1="0%" y1="100%" x2="100%" y2="0%">
+                    <stop offset="0%" style="stop-color: #ff8f5a ;stop-opacity:1"></stop>
+                    <stop offset="100%" style="stop-color:#ff2f96;stop-opacity:1"></stop>
+                </linearGradient>
+            </defs>
+            <path class="svg__size--big" d="M80 650 C 30 580, 10 460, 140 300
+        							S400 10, 580 1
+        							S850 200, 850 200
+        						S850 650, 850 650" stroke="transparent" fill="url(#grad3)"></path>
+            <path class="svg__size--small" d="M170 450 C 150 360, 150 330, 200 240
+        							S400 0, 530 1
+        							S750 200, 750 200
+                    S850 400, 750 550" stroke="transparent"></path>
+        </svg> -->
     </header>
-    <section class="section" id="services">
-        <h3 class="section__text_title">Что я делаю</h3>
-        <div class="section__block_dolist">
-            <div class="section__block_dolist_dolist-left">
-                <figure class="section__block_dolist_dolist-left_image"><img src="img/tools-and-utensils.png" class="" alt="" ><figcaption>Вёрстка лендинг-страниц и сайтов любой сложности</figcaption></figure>
-                <figure class="section__block_dolist_dolist-left_image"><img src="img/responsive.png" class="" alt="" ><figcaption>Адаптивная вёрстка под все браузеры и устройства</figcaption></figure>
+    <section id="services">
+        <div class="section_container todo fixed-container">
+            <h3 class="section__text_title">Что я делаю</h3>
+            <div class="section__block_dolist">
+                    <figure class="section_block__dolist-image"><img src="img/tools-and-utensils.png" class="" alt="">
+                        <figcaption>Вёрстка лендинг-страниц и сайтов любой сложности</figcaption>
+                    </figure>
+                    <figure class="section_block__dolist-image"><img src="img/responsive.png" class="" alt="">
+                        <figcaption>Адаптивная вёрстка под все браузеры и устройства</figcaption>
+                    </figure>
+                    <figure class="section_block__dolist-image"><img src="img/programming.png" class="" alt="">
+                        <figcaption>Frontend-разработка и программирование</figcaption>
+                    </figure>
+                    <figure class="section_block__dolist-image"><img src="img/coding.png" class="" alt="">
+                        <figcaption>Исправление и доработка существующей вёрстки</figcaption>
+                    </figure>
             </div>
-            <div class="section__block_dolist_dolist-right">
-                <figure class="section__block_dolist_dolist-right_image"><img src="img/programming.png" class="" alt="" ><figcaption>Frontend-разработка и программирование</figcaption></figure>
-                <figure class="section__block_dolist_dolist-right_image"><img src="img/coding.png" class="" alt="" ><figcaption>Исправление и доработка существующей вёрстки</figcaption></figure>
+            <button class="header-title__button_solid button_buy">Узнать стоимость</button>
+        </div>
+    </section>
+    <section id="portfolio">
+        <div class="section_container examples fixed-container">
+            <h3 class="section__text_title">Примеры моих работ</h3>
+            <div class="section__slider">
+                <figure class="section__text_title__image"><img src="img/Layer 1.jpg" class="" alt="">
+                    <figcaption>Сайт магазин детской одежды</figcaption>
+                </figure>
+                <figure class="section__text_title__image"><img src="img/Layer 2.jpg" class="" alt="">
+                    <figcaption>Сайт психолога Веры Антоновой</figcaption>
+                </figure>
+                <figure class="section__text_title__image"><img src="img/Layer 3.jpg" class="" alt="">
+                    <figcaption>Сайт магазина &laquo;Рыболов&raquo;</figcaption>
+                </figure>
             </div>
+            <button class="header-title__button_solid button_buy">Заказать проект</button>
         </div>
-        <button class="header-title__button_solid button_buy">Узнать больше</button>
     </section>
-    <section class="section" id="portfolio">
-        <h3 class="section__text_title">Примеры моих работ</h3>
-        <div class="section__slider">
-            <figure class="section__text_title__image"><img src="img/Layer1.png" class="" alt="" ><figcaption>Сайт магазин детской одежды</figcaption></figure>
-            <figure class="section__text_title__image"><img src="img/Layer2.png" class="" alt="" ><figcaption>Сайт психолога Веры Антоновой</figcaption></figure>
-            <figure class="section__text_title__image"><img src="img/Layer3.png" class="" alt="" ><figcaption>Сайт магазина &laquo;Рыболов&raquo;</figcaption></figure>
-        </div>
-        <button class="header-title__button_solid button_buy">Заказать проект</button>
-    </section>
-    <section class="section-gradient" style="text-align: left;" id="prices">
+    <section id="prices">
         <div class="flat-elements-bottom" aria-hidden="true">
             <span>&lt;/&gt;</span>
             <span>&lt;div&gt;</span>
             <span>&lt;/&gt;</span>
             <span>#</span>
         </div>
-        <div class="fixed-container" style="max-width: 1000px;">
-            <h2 class="section-gradient__text title">Адаптивная вёрстка под все устройства<br>и&nbsp;браузеры от 1000 рублей всего за&nbsp;4&nbsp;часа.*</h2>
-            <span class="section-gradient__span_description-title">Срок и стоимость могут отличаться от заявленных и рассчитываются индивидуально,<br>в&nbsp;зависимости от сложности задач.</span>
+        <div class="fixed-container section-gradient">
+            
+            <div class="section-gradient_content fixed-container">
+                <h2 class="section-gradient__text title">Адаптивная вёрстка под все устройства<br>и&nbsp;браузеры от 1000 рублей
+                    всего за&nbsp;4&nbsp;часа.*</h2>
+                <span class="section-gradient__span_description-title">Срок и стоимость могут отличаться от заявленных и
+                    рассчитываются индивидуально,<br>в&nbsp;зависимости от сложности задач.</span>
+            </div>
         </div>
     </section> 
     <footer>
         <div class="block-info">
-            <div>
-                <a href="#services">Услуги</a><br>
-                <a href="#portfolio">Портфолио</a><br>
-                <a href="#prices">Стоимость</a><br>
-            </div>
+            <ul>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#portfolio">Портфолио</a></li>
+                <li><a href="#prices">Стоимость</a></li>
+            </ul>
             <div>
                 <i class="fas fa-phone"></i>&nbsp;&nbsp;&nbsp;<a href="tel:+79997813689" class="info__link_tel">+7 (999) 781-36-89</a><br>
                 <i class="fas fa-envelope"></i>&nbsp;&nbsp;&nbsp;<a href="mailto:admin@khodyr.ru" class="info__link_email">admin@khodyr.ru</a>
