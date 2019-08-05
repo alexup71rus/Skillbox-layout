@@ -35,6 +35,7 @@ $(document).ready(function(){
         }
     });
 
+    // slick
     $(".section__slider").slick({
         dots: true,
         infinite: true,
