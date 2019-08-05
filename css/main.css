@@ -298,6 +298,11 @@ area {
     color: #f12fa0;
 }
 
+header .header-title {
+    display: flex;
+    background-color: #fbfbfb;
+}
+
 .header-title__button_solid {
     display: inline-block;
     font-family: "Roboto", sans-serif;
@@ -832,7 +837,7 @@ p {
 
 }
 
-@media (max-width: 799px) {
+@media (max-width: 800px) {
     /* footer */
 
     .block-info__copy {
@@ -976,7 +981,7 @@ p {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 599px) {
     .header-title_content {
         padding-left: 0;
         padding-top: 390px;
@@ -1008,14 +1013,6 @@ p {
         transform: translateX(-50%);
         height: 260px;
         margin-top: 30px;
-    }
-
-    header .header-title {
-        display: flex;
-        background-repeat: no-repeat;
-        background-position: bottom;
-        background-size: auto;
-        background-color: #fbfbfb;
     }
 
     picture img {
@@ -1057,14 +1054,6 @@ p {
         height: 260px;
         margin-top: 30px;
     }
-
-    header .header-title {
-        display: flex;
-        background-repeat: no-repeat;
-        background-position: bottom;
-        background-size: auto;
-        background-color: #fbfbfb;
-    }
 }
 
 @media (max-width: 1023px) and (min-width: 950px) {
@@ -1093,15 +1082,6 @@ p {
         height: 570px;
         right: 0;
         bottom: 0;
-    }
-
-    header .header-title {
-        display: flex;
-        background-repeat: no-repeat;
-        background-position: bottom;
-        background-size: auto;
-        background-color: #fbfbfb;
-        /* background-image: url("../img/bg-desctop.jpg"); */
     }
 
     .header-title_content {
@@ -1180,7 +1160,7 @@ p {
     .top-menu__link_tel {
         padding: 7px 29px;
         font-family: "Roboto", sans-serif;
-        font-size: 25px;
+        font-size: 23px;
         font-weight: bold;
         text-decoration: none;
         color: #333;
@@ -1343,7 +1323,6 @@ p {
 
     .top-menu__list_menu li {
         margin-top: 20px;
-        /* padding: 15px 5px; */
         text-align: center;
     }
 
@@ -1413,15 +1392,6 @@ p {
         height: 650px;
         right: 0;
         margin-top: 30px;
-    }
-
-    header .header-title {
-        display: flex;
-        background-repeat: no-repeat;
-        background-position: bottom;
-        background-size: auto;
-        background-color: #fbfbfb;
-        /* background-image: url("../img/bg-desctop.jpg"); */
     }
 
     .header-title__text {
@@ -1735,15 +1705,6 @@ p {
         height: 650px;
         right: 0;
         bottom: 0;
-    }
-
-    header .header-title {
-        display: flex;
-        background-repeat: no-repeat;
-        background-position: bottom;
-        background-size: auto;
-        background-color: #fbfbfb;
-        /* background-image: url("../img/bg-desctop.jpg"); */
     }
 
     .header-title__text {
