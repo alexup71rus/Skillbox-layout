@@ -59,59 +59,67 @@ $(document).ready(function(){
     });
 
     // валидация форм и отправка писем
-    popupRecall[0].childNodes[3].childNodes[9].addEventListener('click', function (e) {
-        if (!popupRecall[0].childNodes[3].childNodes[3].value) {
-            popupRecall[0].childNodes[3].childNodes[3].style.outline = '2px solid red';
+    $("#button_send-recall").click(function(e) {
+        var userName = $('.name');
+        var phoneNumber = $('.phone-number');
+        if (!userName.val()) {
+            userName.css("outline", '2px solid red');
             e.preventDefault();
         } else {
-            popupRecall[0].childNodes[3].childNodes[3].style.outline = 'none';
+            userName.css("outline", 'none');
         }
 
-        if (!popupRecall[0].childNodes[3].childNodes[7].value) {
-            popupRecall[0].childNodes[3].childNodes[7].style.outline = '2px solid red';
+        if (!phoneNumber.val()) {
+            phoneNumber.css("outline", '2px solid red');
             e.preventDefault();
         } else {
-            popupRecall[0].childNodes[3].childNodes[7].style.outline = 'none';
+            phoneNumber.css("outline", 'none');
         }
 
-        if (popupRecall[0].childNodes[3].childNodes[3].value && popupRecall[0].childNodes[3].childNodes[7].value) {
-            template = templateMailRecall.replace('{{name}}', popupRecall[0].childNodes[3].childNodes[3].value),
-                template = template.replace('{{phone}}', popupRecall[0].childNodes[3].childNodes[7].value);
-            
-            popupRecall[0].childNodes[3].childNodes[9].href += template;
+        if (userName.val() && phoneNumber.val()) {
+            template = templateMailRecall.replace('{{name}}', userName.val()),
+                template = template.replace('{{phone}}', phoneNumber.val());
+
+            var uri = $("#button_send-recall").attr("href") + template;
+            $("#button_send-recall").attr("href", uri);
         } else {
             e.preventDefault();
         }
     });
 
-    popupChat[0].childNodes[3].childNodes[13].addEventListener('click', function (e) {
-        if (!popupChat[0].childNodes[3].childNodes[3].value) {
-            popupChat[0].childNodes[3].childNodes[3].style.outline = '2px solid red';
+    $("#button_send-chat").click(function (e) {
+        var userName = $($('.name')[1]);
+        var phoneNumber = $($('.phone-number')[1]);
+        var email = $($('.email')[0]);
+
+        if (!userName.val()) {
+            userName.css("outline", '2px solid red');
             e.preventDefault();
         } else {
-            popupChat[0].childNodes[3].childNodes[3].style.outline = 'none';
+            userName.css("outline", 'none');
         }
 
-        if (!popupChat[0].childNodes[3].childNodes[7].value) {
-            popupChat[0].childNodes[3].childNodes[7].style.outline = '2px solid red';
+        if (!phoneNumber.val()) {
+            phoneNumber.css("outline", '2px solid red');
             e.preventDefault();
         } else {
-            popupChat[0].childNodes[3].childNodes[7].style.outline = 'none';
+            phoneNumber.css("outline", 'none');
         }
 
-        if (!popupChat[0].childNodes[3].childNodes[11].value) {
-            popupChat[0].childNodes[3].childNodes[11].style.outline = '2px solid red';
+        if (!email.val()) {
+            email.css("outline", '2px solid red');
             e.preventDefault();
         } else {
-            popupChat[0].childNodes[3].childNodes[11].style.outline = 'none';
+            email.css("outline", 'none');
         }
 
-        if (popupChat[0].childNodes[3].childNodes[3].value && popupChat[0].childNodes[3].childNodes[7].value && popupChat[0].childNodes[3].childNodes[11].value) {
+        if (userName.val() && phoneNumber.val() && email.val()) {
             template = templateMailChat.replace('{{name}}', popupChat[0].childNodes[3].childNodes[3].value),
                 template = template.replace('{{phone}}', popupChat[0].childNodes[3].childNodes[7].value),
                 template = template.replace('{{mail}}', popupChat[0].childNodes[3].childNodes[11].value);
 
-            popupChat[0].childNodes[3].childNodes[13].href += template;
+            var uri = $("#button_send-chat").attr("href") + template;
+            $("#button_send-chat").attr("href", uri);
         } else {
             e.preventDefault();
         }
