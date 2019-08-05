@@ -1,5 +1,5 @@
 'use strict';
-var imageElms;
+
 var templateMailRecall = "Имя: {{name}}<br />Телефон: {{phone}}";
 var templateMailChat = "Имя: {{name}}<br />Телефон: {{phone}}<br />Почта: {{mail}}";
 var template;
