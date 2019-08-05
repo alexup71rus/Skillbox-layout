@@ -509,6 +509,7 @@ p {
     position: absolute;
     height: 100vh !important;
     opacity: 1 !important;
+    padding-top: 30px;
 }
 
 /*  */
@@ -597,10 +598,6 @@ p {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
-}
-
-.flat-elements-top span:hover {
-    opacity: .3;
 }
 
 .flat-elements-top {
@@ -807,7 +804,6 @@ p {
         height: 0;
         overflow: hidden;
         width: 100%;
-        padding: 0px;
         margin: 0;
         opacity: 0;
         transition: .5s;
@@ -1333,11 +1329,12 @@ p {
     .top-menu__list_menu {
         position: fixed;
         background: linear-gradient(to bottom, #ffffff 50px, #ffffff00);
+        top: 0;
         left: 0;
         height: 0;
         overflow: hidden;
         width: 100%;
-        padding-top: 0px;
+        padding-top: 30px;
         margin: 0;
         opacity: 0;
         transition: .5s;
