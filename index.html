@@ -46,15 +46,33 @@
                 <h1 class="header-title__text title">Александр Ходырев</h1>
                 <span class="header-title__span_description-title">Frontend-разработчик и веб-верстальщик</span>
                 <a href="#services" class="header-title__button_solid">Узнать больше</a>
-                <!-- <button class="header-title__button_solid button_buy">Узнать больше</button> -->
-                <div class="flat-elements-top" aria-hidden="true">
-                    <span>&lt;span&gt;</span>
-                    <span>&lt;div&gt;</span>
-                    <span>&lt;/&gt;</span>
-                    <span>#</span>
-                    <span>{&nbsp;&nbsp;}</span>
-                    <span>#</span>
-                </div>
+            </div>
+            <div class="header-title_background">
+                <svg class="svg" width="850" height="650" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <defs>
+                        <linearGradient id="grad3" x1="0%" y1="100%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color: #ff8f5a ;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#ff2f96;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+                    <path class="svg__size--big" d="M80 650 C 30 580, 10 460, 140 300
+                            							S400 10, 580 1
+                            							S850 200, 850 200
+                            						S850 650, 850 650" stroke="transparent" fill="url(#grad3)" />
+                </svg>
+                <picture>
+                    <source srcset="./img/shutterstock_574398823.png 1x, ./img/shutterstock_574398823.png"
+                        media="(min-width: 600px)">
+                    <img src="./img/shutterstock_574398823-m.png" srcset="./img/shutterstock_574398823-m.png 2x"
+                        alt="person">
+                </picture>
+            </div>
+            <div class="flat-elements-top" aria-hidden="true">
+                <span>#</span>
+                <span>&lt;div&gt;</span>
+                <span>&lt;/&gt;</span>
+                <span>#</span>
+                <span>{&nbsp;&nbsp;}</span>
             </div>
         </div>
         <div id="windows">
@@ -63,19 +81,19 @@
                 <i class="fas fa-times close" tabindex="0"
                     onkeyup="if (event.code == 'Enter' || event.code == 'Space') { document.body.style.overflow = 'auto'; $('#popup-recall').fadeOut('fast'); $('#popup_bg').fadeOut('fast'); }"
                     onclick="document.body.style.overflow = 'auto'; $('#popup-recall').fadeOut('fast'); $('#popup_bg').fadeOut('fast');"></i>
-                <div class="popup-content">
+                <form class="popup-content">
                     <p>Имя:</p>
                     <input type="text" class='input name' name="name" placeholder="Имя">
                     <p>Телефон:</p>
                     <input type="phone" class='input phone-number' name="phone" placeholder="+7 (999) 999-99-99">
                     <a href="mailto:admin@khodyr.ru?subject=Заказ звонка&amp;body=" class="send">Отправить</a>
-                </div>
+                </form>
             </div>
             <div class="popup" id="popup-chat" style="display: none">
                 <i class="fas fa-times close" tabindex="0"
                     onkeyup="if (event.code == 'Enter' || event.code == 'Space') { $('#popup-chat').fadeOut('fast'); $('#popup_bg').fadeOut('fast'); document.body.style.overflow = 'auto'; }"
                     onclick="$('#popup-chat').fadeOut('fast'); $('#popup_bg').fadeOut('fast'); document.body.style.overflow = 'auto';"></i>
-                <div class="popup-content">
+                <form class="popup-content">
                     <p>Имя:</p>
                     <input type="text" class='input name' name="name" placeholder="Имя">
                     <p>Телефон:</p>
@@ -83,25 +101,9 @@
                     <p>Почта:</p>
                     <input type="email" class='input email' name="email" placeholder="example@gmail.com">
                     <a href="mailto:admin@khodyr.ru?subject=Узнать больше&amp;body=" class="send">Отправить</a>
-                </div>
+                </form>
             </div>
         </div>
-        <!-- <svg class="svg" width="850" height="650" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <defs>
-                <linearGradient id="grad3" x1="0%" y1="100%" x2="100%" y2="0%">
-                    <stop offset="0%" style="stop-color: #ff8f5a ;stop-opacity:1"></stop>
-                    <stop offset="100%" style="stop-color:#ff2f96;stop-opacity:1"></stop>
-                </linearGradient>
-            </defs>
-            <path class="svg__size--big" d="M80 650 C 30 580, 10 460, 140 300
-        							S400 10, 580 1
-        							S850 200, 850 200
-        						S850 650, 850 650" stroke="transparent" fill="url(#grad3)"></path>
-            <path class="svg__size--small" d="M170 450 C 150 360, 150 330, 200 240
-        							S400 0, 530 1
-        							S750 200, 750 200
-                    S850 400, 750 550" stroke="transparent"></path>
-        </svg> -->
     </header>
     <section id="services">
         <div class="section_container todo fixed-container">
@@ -120,7 +122,7 @@
                         <figcaption>Исправление и доработка существующей вёрстки</figcaption>
                     </figure>
             </div>
-            <button class="header-title__button_solid button_buy">Узнать стоимость</button>
+            <button class="section__button_solid button_buy">Узнать стоимость</button>
         </div>
     </section>
     <section id="portfolio">
@@ -137,13 +139,13 @@
                     <figcaption>Сайт магазина &laquo;Рыболов&raquo;</figcaption>
                 </figure>
             </div>
-            <button class="header-title__button_solid button_buy">Заказать проект</button>
+            <button class="section__button_solid button_buy">Заказать проект</button>
         </div>
     </section>
     <section id="prices">
         <div class="flat-elements-bottom" aria-hidden="true">
             <span>&lt;/&gt;</span>
-            <span>&lt;div&gt;</span>
+            <span>&lt;span&gt;</span>
             <span>&lt;/&gt;</span>
             <span>#</span>
         </div>
@@ -159,14 +161,18 @@
     </section> 
     <footer>
         <div class="block-info">
-            <ul>
-                <li><a href="#services">Услуги</a></li>
-                <li><a href="#portfolio">Портфолио</a></li>
-                <li><a href="#prices">Стоимость</a></li>
-            </ul>
+            <nav>
+                <ul>
+                    <li><a href="#services">Услуги</a></li>
+                    <li><a href="#portfolio">Портфолио</a></li>
+                    <li><a href="#prices">Стоимость</a></li>
+                </ul>
+            </nav>
             <div>
-                <i class="fas fa-phone"></i>&nbsp;&nbsp;&nbsp;<a href="tel:+79997813689" class="info__link_tel">+7 (999) 781-36-89</a><br>
-                <i class="fas fa-envelope"></i>&nbsp;&nbsp;&nbsp;<a href="mailto:admin@khodyr.ru" class="info__link_email">admin@khodyr.ru</a>
+                <ul>
+                    <li><i class="fas fa-phone"></i><a href="tel:+79997813689" class="info__link_tel">+7 (999) 781-36-89</a></li>
+                    <li><i class="fas fa-envelope"></i><a href="mailto:admin@khodyr.ru" class="info__link_email">admin@khodyr.ru</a></li>
+                </ul>
             </div>
             <div>
                 <button class="block-info__button_transparent button_call">Заказать звонок</button>
