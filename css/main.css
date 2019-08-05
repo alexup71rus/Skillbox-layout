@@ -656,8 +656,9 @@ p {
 
     .top-menu__button_call_m {
         float: right;
-        margin-top: 28px;
-        margin-right: 25px;
+        margin-top: 26px;
+        margin-right: 23px;
+        padding: 5px;
     }
 
     .header-title__text {
