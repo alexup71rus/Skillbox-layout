@@ -507,7 +507,6 @@ p {
 
 .show-mobile-menu {
     position: absolute;
-    padding-top: 50px !important;
     height: 100vh !important;
     opacity: 1 !important;
 }
@@ -587,6 +586,7 @@ p {
 /* Летающие теги */
 
 .flat-elements-top span {
+    position: absolute;
     transition: 1s;
     cursor: default;
     background: linear-gradient(30deg, #f35c2c, #fa098f);
@@ -607,39 +607,33 @@ p {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    width: 100%;
-    height: 100%;
-    max-width: 1920px;
     font-family: "Roboto", sans-serif;
     font-weight: 600;
     font-size: 35px;
     color: transparent;
-    z-index: 0;
-    transition: 1s;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 .flat-elements-bottom {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    width: 100%;
-    max-width: 1920px;
-    padding-bottom: 370px;
-    overflow: hidden;
     font-family: "Roboto", sans-serif;
-    font-weight: 600;
-    font-size: 35px;
+    font-weight: 600;    
+    pointer-events: none;
+}
+
+.flat-elements-bottom span {
+    position: absolute;
     color: #ffffff;
     transition: 1s;
-    pointer-events: none;
 }
 
 /*  */
 
 
 
-@media (max-width: 600px) {
+@media (max-width: 599px) {
     /* header */
 
     .top-menu__link_tel {
@@ -840,23 +834,6 @@ p {
         display: none !important;
     }
 
-    /* переключатели слайдера */
-
-    
-
-    /* анимации тегов */
-
-    .flat-elements-top span:nth-child(1) { position: absolute; transform: translate(36px, -568px) rotate(-10deg); font-size: 30px; }
-    .flat-elements-top span:nth-child(2) { position: absolute; transform: translate(342px, -668px) rotate(15deg); font-size: 20px; }
-    .flat-elements-top span:nth-child(3) { position: absolute; transform: translate(236px, -676px) rotate(52deg); font-size: 30px; }
-    .flat-elements-top span:nth-child(4) { position: absolute; transform: translate(-131px, 226px) rotate(20deg); font-size: 40px; }
-    .flat-elements-top span:nth-child(5) { position: absolute; transform: translate(-95px, -176px) rotate(-20deg); font-size: 40px; }
-    .flat-elements-top span:nth-child(6) { position: absolute; transform: translate(80px, -375px) rotate(-20deg); font-size: 40px; }
-
-    /* .slick-list {
-        margin-bottom: 80px;
-    } */
-
 }
 
 @media (max-width: 799px) {
@@ -1003,7 +980,7 @@ p {
     }
 }
 
-@media (max-width: 599px) {
+@media (max-width: 600px) {
     .header-title_content {
         padding-left: 0;
         padding-top: 390px;
@@ -1021,8 +998,10 @@ p {
     .header-title_background {
         position: absolute;
         width: 100%;
-        max-width: 1920px;
+        right: 50%;
+        transform: translateX(50%);
         overflow: hidden;
+        min-width: 320px;
         height: 400px;
     }
 
@@ -1041,6 +1020,11 @@ p {
         background-position: bottom;
         background-size: auto;
         background-color: #fbfbfb;
+    }
+
+    picture img {
+        width: 300px;
+        height: 350px;
     }
 }
 
@@ -1062,6 +1046,8 @@ p {
     .header-title_background {
         position: absolute;
         width: 100%;
+        right: 50%;
+        transform: translateX(50%);
         max-width: 1920px;
         overflow: hidden;
         height: 660px;
@@ -1097,6 +1083,8 @@ p {
     .header-title_background {
         position: absolute;
         width: 100%;
+        right: 50%;
+        transform: translateX(50%);
         max-width: 1920px;
         overflow: hidden;
         height: 655px;
@@ -1127,6 +1115,52 @@ p {
     }
 }
 
+
+@media (max-width: 600px) {
+    /* анимации тегов */
+
+    .flat-elements-top span:nth-child(1) { transform: translate(-120px, 50px) rotate(30deg); font-size: 30px; }
+    .flat-elements-top span:nth-child(2) { transform: translate(-140px, 170px) rotate(-20deg); font-size: 30px; }
+    .flat-elements-top span:nth-child(3) { transform: translate(-50px, 20px) rotate(-10deg); font-size: 20px; }
+    .flat-elements-top span:nth-child(4) { transform: translate(40px, 50px) rotate(30deg); font-size: 30px; }
+    .flat-elements-top span:nth-child(5) { transform: translate(30px, 200px) rotate(-20deg); font-size: 20px; }
+
+    .flat-elements-bottom span:nth-child(1) { right: 80px; transform: translate(-7px, 132px) rotate(30deg); font-size: 20px; }
+    .flat-elements-bottom span:nth-child(2) { transform: translate(436px, 326px) rotate(-10deg); font-size: 20px; }
+    .flat-elements-bottom span:nth-child(3) { transform: translate(396px, 35px) rotate(10deg); font-size: 30px; }
+    .flat-elements-bottom span:nth-child(4) { transform: translate(27px, 245px) rotate(-20deg); font-size: 40px; }
+}
+
+@media (max-width: 950px) and (min-width: 600px) {
+    /* анимации тегов */
+
+    .flat-elements-top span:nth-child(1) { transform: translate(-250px, 50px) rotate(30deg); font-size: 30px; }
+    .flat-elements-top span:nth-child(2) { transform: translate(-270px, 500px) rotate(20deg); font-size: 50px; }
+    .flat-elements-top span:nth-child(3) { transform: translate(-100px, 450px) rotate(-20deg); font-size: 30px; }
+    .flat-elements-top span:nth-child(4) { transform: translate(-50px, 90px) rotate(-30deg); font-size: 40px; }
+    .flat-elements-top span:nth-child(5) { transform: translate(180px, 0px) rotate(20deg); font-size: 30px; }
+
+    .flat-elements-bottom span:nth-child(1) { transform: translate(-400px, 420px) rotate(150deg); font-size: 25px; }
+    .flat-elements-bottom span:nth-child(2) { display: none; }
+    .flat-elements-bottom span:nth-child(3) { transform: translate(250px, 35px) rotate(10deg); font-size: 30px; }
+    .flat-elements-bottom span:nth-child(4) { display: none; }
+}
+
+
+@media (max-width: 1023px) and (min-width: 950px) {
+    /* анимации тегов */
+
+    .flat-elements-top span:nth-child(1) { transform: translate(-350px, 50px) rotate(30deg); font-size: 50px; }
+    .flat-elements-top span:nth-child(2) { transform: translate(-350px, 500px) rotate(20deg); font-size: 50px; }
+    .flat-elements-top span:nth-child(3) { transform: translate(-100px, 450px) rotate(-20deg); font-size: 30px; }
+    .flat-elements-top span:nth-child(4) { transform: translate(-50px, 90px) rotate(-30deg); font-size: 40px; }
+    .flat-elements-top span:nth-child(5) { transform: translate(230px, 0px) rotate(20deg); font-size: 30px; }
+
+    .flat-elements-bottom span:nth-child(1) { transform: translate(-420px, 40px) rotate(150deg); font-size: 25px; }
+    .flat-elements-bottom span:nth-child(2) { transform: translate(300px, 220px) rotate(20deg); font-size: 30px; }
+    .flat-elements-bottom span:nth-child(3) { transform: translate(396px, 35px) rotate(10deg); font-size: 30px; }
+    .flat-elements-bottom span:nth-child(4) { transform: translate(-530px, 285px) rotate(-20deg); font-size: 40px; }
+}
 
 @media (max-width: 1023px) and (min-width: 600px) {
     /* header */
@@ -1303,8 +1337,7 @@ p {
 
     .top-menu__list_menu {
         position: fixed;
-        background: linear-gradient(to bottom, #ffffffd4 120px, #ffffff00);
-        top: 0;
+        background: linear-gradient(to bottom, #ffffff 50px, #ffffff00);
         left: 0;
         height: 0;
         overflow: hidden;
@@ -1317,7 +1350,8 @@ p {
     }
 
     .top-menu__list_menu li {
-        padding: 15px 5px;
+        margin-top: 20px;
+        /* padding: 15px 5px; */
         text-align: center;
     }
 
@@ -1341,22 +1375,6 @@ p {
     .slick-prev {
         display: none !important;
     }
-
-    /* анимации тегов */
-
-    .flat-elements-top span:nth-child(1) { position: absolute; transform: translate(36px, 68px) rotate(10deg); font-size: 30px; }
-    .flat-elements-top span:nth-child(2) { position: absolute; transform: translate(-89px, -268px) rotate(15deg); font-size: 40px; }
-    .flat-elements-top span:nth-child(3) { position: absolute; transform: translate(236px, 105px) rotate(-20deg); font-size: 40px; }
-    .flat-elements-top span:nth-child(4) { position: absolute; transform: translate(-131px, 226px) rotate(20deg); font-size: 40px; }
-    .flat-elements-top span:nth-child(5) { position: absolute; transform: translate(-95px, -176px) rotate(-20deg); font-size: 40px; }
-    .flat-elements-top span:nth-child(6) { position: absolute; transform: translate(80px, -375px) rotate(-20deg); font-size: 40px; }
-
-    .flat-elements-bottom span:nth-child(1) { position: absolute; transform: translate(1039px, 232px) rotate(30deg); font-size: 30px; }
-    .flat-elements-bottom span:nth-child(2) { position: absolute; transform: translate(436px, 326px) rotate(-10deg); font-size: 20px; }
-    .flat-elements-bottom span:nth-child(3) { position: absolute; transform: translate(396px, 35px) rotate(10deg); font-size: 30px; }
-    .flat-elements-bottom span:nth-child(4) { position: absolute; transform: translate(14px, 302px) rotate(-20deg); font-size: 40px; }
-    .flat-elements-bottom span:nth-child(5) { position: absolute; transform: translate(-95px, 76px) rotate(-20deg); font-size: 40px; }
-    .flat-elements-bottom span:nth-child(6) { position: absolute; transform: translate(-236px, 205px) rotate(-20deg); font-size: 40px; }
 
 }
 
@@ -1390,6 +1408,8 @@ p {
     .header-title_background {
         position: absolute;
         width: 100%;
+        right: 50%;
+        transform: translateX(50%);
         max-width: 1920px;
         overflow: hidden;
         height: 660px;
@@ -1660,19 +1680,16 @@ p {
 
     /* анимации тегов */
 
-    .flat-elements-top span:nth-child(1) { position: absolute; transform: translate(36px, 205px) rotate(10deg); font-size: 30px; }
-    .flat-elements-top span:nth-child(2) { position: absolute; transform: translate(436px, -205px) rotate(-20deg); font-size: 40px; }
-    .flat-elements-top span:nth-child(3) { position: absolute; transform: translate(236px, 205px) rotate(-20deg); font-size: 40px; }
-    .flat-elements-top span:nth-child(4) { position: absolute; transform: translate(-131px, 226px) rotate(20deg); font-size: 40px; }
-    .flat-elements-top span:nth-child(5) { position: absolute; transform: translate(-95px, -176px) rotate(-20deg); font-size: 40px; }
-    .flat-elements-top span:nth-child(6) { position: absolute; transform: translate(236px, -205px) rotate(-20deg); font-size: 40px; }
+    .flat-elements-top span:nth-child(1) { transform: translate(-450px, 50px) rotate(30deg); font-size: 50px; }
+    .flat-elements-top span:nth-child(2) { transform: translate(-450px, 500px) rotate(20deg); font-size: 50px; }
+    .flat-elements-top span:nth-child(3) { transform: translate(-100px, 450px) rotate(-20deg); font-size: 30px; }
+    .flat-elements-top span:nth-child(4) { transform: translate(-50px, 90px) rotate(-30deg); font-size: 40px; }
+    .flat-elements-top span:nth-child(5) { transform: translate(400px, 0px) rotate(20deg); font-size: 30px; }
 
-    .flat-elements-bottom span:nth-child(1) { position: absolute; right: 30px; transform: translate(-7px, 132px) rotate(30deg); font-size: 20px; }
-    .flat-elements-bottom span:nth-child(2) { position: absolute; transform: translate(436px, 326px) rotate(-10deg); font-size: 20px; }
-    .flat-elements-bottom span:nth-child(3) { position: absolute; transform: translate(396px, 35px) rotate(10deg); font-size: 30px; }
-    .flat-elements-bottom span:nth-child(4) { position: absolute; transform: translate(27px, 245px) rotate(-20deg); font-size: 40px; }
-    .flat-elements-bottom span:nth-child(5) { position: absolute; transform: translate(-95px, 76px) rotate(-20deg); font-size: 40px; }
-    .flat-elements-bottom span:nth-child(6) { position: absolute; transform: translate(-236px, 205px) rotate(-20deg); font-size: 40px; }
+    .flat-elements-bottom span:nth-child(1) { transform: translate(-420px, 40px) rotate(150deg); font-size: 25px; }
+    .flat-elements-bottom span:nth-child(2) { transform: translate(330px, 300px) rotate(-10deg); font-size: 30px; }
+    .flat-elements-bottom span:nth-child(3) { transform: translate(396px, 35px) rotate(10deg); font-size: 30px; }
+    .flat-elements-bottom span:nth-child(4) { transform: translate(-530px, 285px) rotate(-20deg); font-size: 40px; }
 
 
 }
@@ -1713,6 +1730,8 @@ p {
     .header-title_background {
         position: absolute;
         width: 100%;
+        right: 50%;
+        transform: translateX(50%);
         max-width: 1920px;
         overflow: hidden;
         height: 660px;
@@ -1985,20 +2004,16 @@ p {
 
     /* анимации тегов */
 
-    .flat-elements-top span:nth-child(1) { position: absolute; transform: translate(536px, 205px) rotate(30deg); font-size: 30px; }
-    .flat-elements-top span:nth-child(2) { position: absolute; transform: translate(436px, -205px) rotate(-20deg); font-size: 40px; }
-    .flat-elements-top span:nth-child(3) { position: absolute; transform: translate(236px, 205px) rotate(-20deg); font-size: 40px; }
-    .flat-elements-top span:nth-child(4) { position: absolute; transform: translate(-131px, 226px) rotate(20deg); font-size: 40px; }
-    .flat-elements-top span:nth-child(5) { position: absolute; transform: translate(-95px, -76px) rotate(-20deg); font-size: 40px; }
-    .flat-elements-top span:nth-child(6) { position: absolute; transform: translate(-236px, -205px) rotate(-20deg); font-size: 40px; }
+    .flat-elements-top span:nth-child(1) { transform: translate(-750px, 50px) rotate(40deg); font-size: 40px; }
+    .flat-elements-top span:nth-child(2) { transform: translate(-650px, 250px) rotate(20deg); font-size: 50px; }
+    .flat-elements-top span:nth-child(3) { transform: translate(-550px, 500px) rotate(-20deg); font-size: 35px; }
+    .flat-elements-top span:nth-child(4) { transform: translate(-50px, 400px) rotate(20deg); font-size: 40px; }
+    .flat-elements-top span:nth-child(5) { transform: translate(50px, 50px) rotate(-20deg); font-size: 30px; }
 
-    .flat-elements-bottom span:nth-child(1) { position: absolute; right: 80px; transform: translate(-7px, 132px) rotate(30deg); font-size: 20px; }
-    .flat-elements-bottom span:nth-child(2) { position: absolute; transform: translate(436px, 326px) rotate(-10deg); font-size: 20px; }
-    .flat-elements-bottom span:nth-child(3) { position: absolute; transform: translate(396px, 35px) rotate(10deg); font-size: 30px; }
-    .flat-elements-bottom span:nth-child(4) { position: absolute; transform: translate(27px, 245px) rotate(-20deg); font-size: 40px; }
-    .flat-elements-bottom span:nth-child(5) { position: absolute; transform: translate(-95px, 76px) rotate(-20deg); font-size: 40px; }
-    .flat-elements-bottom span:nth-child(6) { position: absolute; transform: translate(-236px, 205px) rotate(-20deg); font-size: 40px; }
-
+    .flat-elements-bottom span:nth-child(1) { transform: translate(-700px, 132px) rotate(30deg); font-size: 20px; }
+    .flat-elements-bottom span:nth-child(2) { transform: translate(500px, 300px) rotate(-10deg); font-size: 20px; }
+    .flat-elements-bottom span:nth-child(3) { transform: translate(396px, 35px) rotate(10deg); font-size: 30px; }
+    .flat-elements-bottom span:nth-child(4) { transform: translate(-550px, 245px) rotate(-20deg); font-size: 40px; }
 
 }
 
