@@ -97,7 +97,7 @@ $(document).ready(function(){
 
 function validate() {
     [].forEach.call(arguments, function (element) {
-        if (element.attr('required')) {
+        if (element.attr('required') && ! element.val()) {
             element.css("outline", '2px solid red');
         } else {
             element.css("outline", 'none');
