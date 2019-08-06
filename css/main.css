@@ -437,14 +437,12 @@ header .header-title {
 .popup {
     display: inline-block;
     position: fixed;
-    top: 50%;
-    left: 50%;
+    top: 30%;
     width: 100%;
     max-width: 400px;
     max-height: 400px;
     background: #ffffff;
     z-index: 100;
-    transform: translate(-50%, -50%);
     border-radius: 3px;
     box-shadow: 0 3px 10px -3px #333;
     border: 0;
