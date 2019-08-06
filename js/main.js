@@ -61,68 +61,46 @@ $(document).ready(function(){
 
     // валидация форм и отправка писем
     $("#button_send-recall").click(function(e) {
-        var userName = $('.name');
-        var phoneNumber = $('.phone-number');
-        if (!userName.val()) {
-            userName.css("outline", '2px solid red');
-            e.preventDefault();
-        } else {
-            userName.css("outline", 'none');
-        }
-
-        if (!phoneNumber.val()) {
-            phoneNumber.css("outline", '2px solid red');
-            e.preventDefault();
-        } else {
-            phoneNumber.css("outline", 'none');
-        }
+        var userName = $('#form-recall_name-input');
+        var phoneNumber = $('#form-recall_phone-input');
+        
+        validate(userName, phoneNumber);
 
         if (userName.val() && phoneNumber.val()) {
             template = templateMailRecall.replace('{{name}}', userName.val()),
                 template = template.replace('{{phone}}', phoneNumber.val());
 
-            var uri = $("#button_send-recall").attr("href") + template;
-            $("#button_send-recall").attr("href", uri);
-        } else {
-            e.preventDefault();
+            var uri = $("#popup-recall form").attr("action") + template;
+            window.open(uri, "_blank");
         }
+        e.preventDefault();
     });
 
     $("#button_send-chat").click(function (e) {
-        var userName = $($('.name')[1]);
-        var phoneNumber = $($('.phone-number')[1]);
-        var email = $($('.email')[0]);
+        var userName = $('#form-chat_name-input');
+        var phoneNumber = $('#form-chat_phone-input');
+        var email = $('#form-chat_email-input');
 
-        if (!userName.val()) {
-            userName.css("outline", '2px solid red');
-            e.preventDefault();
-        } else {
-            userName.css("outline", 'none');
-        }
-
-        if (!phoneNumber.val()) {
-            phoneNumber.css("outline", '2px solid red');
-            e.preventDefault();
-        } else {
-            phoneNumber.css("outline", 'none');
-        }
-
-        if (!email.val()) {
-            email.css("outline", '2px solid red');
-            e.preventDefault();
-        } else {
-            email.css("outline", 'none');
-        }
+        validate(userName, phoneNumber, email);
 
         if (userName.val() && phoneNumber.val() && email.val()) {
-            template = templateMailChat.replace('{{name}}', popupChat[0].childNodes[3].childNodes[3].value),
-                template = template.replace('{{phone}}', popupChat[0].childNodes[3].childNodes[7].value),
-                template = template.replace('{{mail}}', popupChat[0].childNodes[3].childNodes[11].value);
+            template = templateMailChat.replace('{{name}}', userName.val()),
+                template = template.replace('{{phone}}', phoneNumber.val()),
+                template = template.replace('{{mail}}', email.val());
 
-            var uri = $("#button_send-chat").attr("href") + template;
-            $("#button_send-chat").attr("href", uri);
-        } else {
-            e.preventDefault();
+            var uri = $("#popup-chat form").attr("action") + template;
+            window.open(uri, "_blank");
         }
+        e.preventDefault();
     });
 });
+
+function validate() {
+    [].forEach.call(arguments, function (element) {
+        if (element.attr('required')) {
+            element.css("outline", '2px solid red');
+        } else {
+            element.css("outline", 'none');
+        }
+    });
+}

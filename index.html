@@ -73,32 +73,34 @@
         </div>
         <div id="windows">
             <i id="popup_bg" onclick="document.body.style.overflow = 'auto'; $(this).fadeOut('fast'); $('#popup-recall').fadeOut('fast'); $('#popup-chat').fadeOut('fast');" style="display: none"></i>
-            <div class="popup" id="popup-recall" style="display: none">
+            <dialog class="popup" id="popup-recall" style="display: none">
                 <i class="fas fa-times close" tabindex="0"
                     onkeyup="if (event.code == 'Enter' || event.code == 'Space') { document.body.style.overflow = 'auto'; $('#popup-recall').fadeOut('fast'); $('#popup_bg').fadeOut('fast'); }"
                     onclick="document.body.style.overflow = 'auto'; $('#popup-recall').fadeOut('fast'); $('#popup_bg').fadeOut('fast');"></i>
-                <form class="popup-content">
-                    <p>Имя:</p>
-                    <input type="text" class='input name' name="name" placeholder="Имя">
-                    <p>Телефон:</p>
-                    <input type="tel" class='input phone-number' name="phone" placeholder="+7 (999) 999-99-99">
-                    <a href="mailto:admin@khodyr.ru?subject=Заказ звонка&body=" class="send" id="button_send-recall">Отправить</a>
+                <form action="mailto:admin@khodyr.ru?subject=Заказ%20звонка&body=" method="GET" class="popup-content">
+                    <label for="form-recall_name-input">Имя:</label>
+                    <input type="text" id="form-recall_name-input" class='input name' name="name" placeholder="Имя" required>
+                    <label for="form-recall_phone-input">Телефон:</label>
+                    <input type="tel" id="form-recall_phone-input" class='input phone-number' name="phone" placeholder="+7 (999) 999-99-99" required>
+                    <button type="submit" class="send" id="button_send-recall">Отправить</button>
+                    <!-- <a href="mailto:admin@khodyr.ru?subject=Заказ звонка&body=" class="send" id="button_send-recall">Отправить</a> -->
                 </form>
-            </div>
-            <div class="popup" id="popup-chat" style="display: none">
+            </dialog>
+            <dialog class="popup" id="popup-chat" style="display: none">
                 <i class="fas fa-times close" tabindex="0"
                     onkeyup="if (event.code == 'Enter' || event.code == 'Space') { $('#popup-chat').fadeOut('fast'); $('#popup_bg').fadeOut('fast'); document.body.style.overflow = 'auto'; }"
                     onclick="$('#popup-chat').fadeOut('fast'); $('#popup_bg').fadeOut('fast'); document.body.style.overflow = 'auto';"></i>
-                <form class="popup-content">
-                    <p>Имя:</p>
-                    <input type="text" class='input name' name="name" placeholder="Имя">
-                    <p>Телефон:</p>
-                    <input type="tel" class='input phone-number' name="phone" placeholder="+7 (999) 999-99-99">
-                    <p>Почта:</p>
-                    <input type="email" class='input email' name="email" placeholder="example@gmail.com">
-                    <a href="mailto:admin@khodyr.ru?subject=Узнать больше&body=" class="send" id="button_send-chat">Отправить</a>
+                <form action="mailto:admin@khodyr.ru?subject=Узнать%20больше&body=" method="GET" class="popup-content">
+                    <label for="form-chat_name-input">Имя:</label>
+                    <input type="text" id="form-chat_name-input" class='input name' name="name" placeholder="Имя" required>
+                    <label for="form-chat_phone-input">Телефон:</label>
+                    <input type="tel" id="form-chat_phone-input" class='input phone-number' name="phone" placeholder="+7 (999) 999-99-99" required>
+                    <label for="form-chat_email-input">Почта:</label>
+                    <input type="email" id="form-chat_email-input" class='input email' name="email" placeholder="example@gmail.com">
+                    <button type="submit" class="send" id="button_send-chat">Отправить</button>
+                    <!-- <a href="mailto:admin@khodyr.ru?subject=Узнать больше&body=" class="send" id="button_send-chat">Отправить</a> -->
                 </form>
-            </div>
+            </dialog>
         </div>
     </header>
     <section id="services">
