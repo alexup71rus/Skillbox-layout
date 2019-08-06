@@ -441,7 +441,6 @@ header .header-title {
     left: 50%;
     width: 100%;
     max-width: 400px;
-    height: auto;
     max-height: 400px;
     background: #ffffff;
     z-index: 100;
@@ -631,8 +630,36 @@ p {
     transition: 1s;
 }
 
-/*  */
+.block-info_bottom-links li {
+    display: inline-block;
+}
 
+.block-info_bottom-links li a {
+    padding: 3px 18px;
+    margin-right: 10px;
+    background-repeat: no-repeat;
+}
+
+.block-info_bottom-link:nth-child(1) a {
+    background-image: url(../img/соцсети.png);
+}
+
+.block-info_bottom-link:nth-child(2) a {
+    background-image: url(../img/соцсети.png);
+        background-position-x: -53px;
+}
+
+.block-info_bottom-link:nth-child(3) a {
+    background-image: url(../img/соцсети.png);
+        background-position-x: -106px;
+}
+
+.block-info_bottom-link:nth-child(4) a {
+    background-image: url(../img/соцсети.png);
+        background-position-x: -159px;
+}
+
+/*  */
 
 
 @media (max-width: 599px) {
@@ -970,7 +997,7 @@ p {
         border: none;
         outline: 1px solid #fb4c18;
         cursor: pointer;
-        margin: 0 0 30px 0;
+        margin-bottom: 25px;
     }
 
     .block-info__button_transparent:focus {
@@ -1521,7 +1548,7 @@ p {
         border: none;
         outline: 1px solid #fb4c18;
         cursor: pointer;
-        margin: 0 0 30px 0;
+        margin-bottom: 25px;
     }
 
     .block-info__button_transparent:focus {
@@ -1836,7 +1863,7 @@ p {
         border: none;
         outline: 1px solid #fb4c18;
         cursor: pointer;
-        margin: 0 0 30px 0;
+        margin-bottom: 25px;
     }
 
     .block-info__button_transparent:focus {
