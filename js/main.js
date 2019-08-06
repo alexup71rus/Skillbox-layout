@@ -1,7 +1,9 @@
 'use strict';
 
 var templateMailRecall = "Имя: {{name}}<br />Телефон: {{phone}}";
+var uriMailRecall = "mailto:admin@khodyr.ru?subject=Заказ%20звонка&body=";
 var templateMailChat = "Имя: {{name}}<br />Телефон: {{phone}}<br />Почта: {{mail}}";
+var uriMailChat = "mailto:admin@khodyr.ru?subject=Узнать%20больше&body=";
 var template;
 
 $(document).ready(function(){
@@ -70,8 +72,7 @@ $(document).ready(function(){
             template = templateMailRecall.replace('{{name}}', userName.val()),
                 template = template.replace('{{phone}}', phoneNumber.val());
 
-            var uri = $("#popup-recall form").attr("action") + template;
-            window.open(uri, "_blank");
+            window.open(uriMailRecall + template, "_blank");
         }
         e.preventDefault();
     });
@@ -88,8 +89,7 @@ $(document).ready(function(){
                 template = template.replace('{{phone}}', phoneNumber.val()),
                 template = template.replace('{{mail}}', email.val());
 
-            var uri = $("#popup-chat form").attr("action") + template;
-            window.open(uri, "_blank");
+            window.open(uriMailChat + template, "_blank");
         }
         e.preventDefault();
     });

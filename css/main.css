@@ -596,9 +596,6 @@ p {
     transition: 1s;
     cursor: default;
     background: linear-gradient(30deg, #f35c2c, #fa098f);
-    background: -webkit-linear-gradient(left, #f35c2c 0%, #fa098f 30%);
-    background: -o-linear-gradient(left, #f35c2c 0%, #fa098f 30%);
-    background: -ms-linear-gradient(to right, #f35c2c 0%, #fa098f 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
