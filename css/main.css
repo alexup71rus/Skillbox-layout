@@ -437,7 +437,7 @@ header .header-title {
 .popup {
     display: inline-block;
     position: fixed;
-    top: 30%;
+    top: 10%;
     width: 100%;
     max-width: 400px;
     max-height: 400px;
